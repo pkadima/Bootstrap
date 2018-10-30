@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Plusieurs exemples Bootstrap</title>
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <style type="text/css">
+  body { background-color:#DDD; }
+  [class*="col"] { margin-bottom: 20px; }
+  .container{
+    padding: 40px;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <form class="form-horizontal col-lg-6">
+        <div class="form-group">
+          <legend>Légende</legend>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label for="text" class="col-lg-2 control-label">Text : </label>
+            <div class="col-lg-10">
+              <input type="text" class="form-control" id="text">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label for="textarea" class="col-lg-2 control-label">Textarea : </label>
+            <div class="col-lg-10">
+              <input type="textarea" class="form-control" id="textarea">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+          <label for="select" class="col-lg-2 control-label">Select: </label>
+            <div class="col-lg-10">
+              <select id="select" class="form-control" >
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="pull-right btn btn-default">Envoyer</button>
+        </div>
+      </form>
+    </div>
+
+    <br/><br/>
+
+    <div class="row">
+      <form class="form-inline">
+        <div class="form-group">
+          <label class="sr-only" for="text">Texte</label>
+          <input type="text" class="form-control" id="text" placeholder="un texte ici">
+        </div>
+        <div class="form-group">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Se rappeler de moi...
+          </label>
+        </div>
+        <button type="submit" class="btn btn-default">Envoyer</button>
+      </form>
+    </div>
+
+    <br/><br/>
+
+    <div class="row">
+      <form class="form-inline">
+        <div class="form-group">
+          <div class="input-group"> 
+            <span class="input-group-addon">€</span>
+            <input type="text" class="form-control" style="text-align:right" value="100">
+            <span class="input-group-addon">.00</span> 
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <input type="text" class="form-control" style="text-align:right" value="100,50">
+            <span class="input-group-addon">€</span> 
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">   
+            <input type="text" class="form-control" style="text-align:right" value="10 000">
+            <span class="input-group-btn">
+              <button class="btn btn-default btn-success" type="button">Valider</button>
+              <button class="btn btn-default btn-danger" type="button">Annuler</button>
+            </span>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <br/><br/>
+
+    <div class="row">
+      <form class="form col-lg-3">
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <input type="checkbox">
+              </span>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <input type="radio">
+              </span>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control input-sm" value="Petit">
+            <input type="text" class="form-control" value="Normal">
+            <input type="text" class="form-control input-lg" value="Grand">
+          </div>
+      </form>
+    </div>
+
+    <br/><br/>
+
+    <div class="row">
+      <form class="col-lg-5">
+        <fieldset>
+          <legend>Validation, erreur et succès</legend>
+          <div class="form-group has-error has-feedback">
+            <label class="control-label" for="idError">Erreur</label>
+            <input type="text" class="form-control" id="idError">
+            <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+            <span class="help-block">Corrigez l'erreur s'il vous plait</span>
+          </div>
+          <div class="form-group has-warning has-feedback">
+            <label class="control-label" for="idWarning">Avertissement</label>
+            <input type="text" class="form-control" id="idWarning">
+            <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+            <span class="help-block">Il y a un problème dans la saisie</span>
+          </div>
+          <div class="form-group has-success has-feedback">
+            <label class="control-label" for="idSuccess">Réussite</label>
+            <input type="text" class="form-control" id="idSuccess">
+            <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+            <span class="help-block">Saisie correcte</span>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+
+    <br/><br/>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <form class="form-inline well myForm">
+          <div class="form-group ">
+            <label class="sr-only" for="text">Saisie</label>
+            <input id="text" type="text" class="form-control myInput" placeholder="Texte ici">
+          </div>
+          <button type="submit" class="btn btn-primary pull-right">Envoyer</button>
+          <div class="alert alert-block alert-danger" style="display:none">
+            <h4>Erreur !</h4>
+            Vous devez entrer au moins 4 caractères ! 
+          </div>
+        </form>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script>
+        $(function(){
+          $(".myForm").on("submit", function() {
+            if($(".myInput").val().length < 4) {
+              $(".myForm div.form-group").addClass("has-error");
+              $(".myForm div.alert").show("slow").delay(4000).hide("slow");
+              return false;
+            }
+          });
+        });
+      </script>
+    </div>
+      
+
+  </div>
+</body>
